@@ -15,16 +15,6 @@ def z(): t.sleep(r.uniform(0.3, 0.7))
 # === suppress output everywhere ===
 FNULL = open(os.devnull, 'w')
 
-# === encoded STORMTRANCE emit ===
-def v(name, src):
-    stamp = s.getoutput("date '+%Y-%m-%d %H:%M:%S'")
-    h = k.gethostname()
-    entry = f"[STORMTRANCE] [{stamp}] [{h}] VECTOR[{name}] SOURCE[{src}]"
-    logp = os.path.expanduser("~/.kaylarecon/logs/guardian.log")
-    os.makedirs(os.path.dirname(logp), exist_ok=True)
-    with open(logp, 'a') as f: f.write(x(entry) + '\n')
-    print(entry)  # Output plaintext to terminal for visibility
-
 # === firewall sever ===
 def a():
     system = platform.system()
